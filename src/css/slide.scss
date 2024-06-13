@@ -1,0 +1,71 @@
+@import '~bootstrap/scss/bootstrap';
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container-slide{
+    
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    
+    .body-shopee{
+        padding-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 20%;
+        .top-left-shopee{
+            img{
+                height: 20.5rem;
+                width: 30rem;
+            }
+        }
+        .top-right-shopee{
+            
+            display: flex;
+            flex-direction: column;
+            height: max-content;
+            gap: 0.5rem;
+            margin-left: 0.5rem;
+        }
+        .top-right-shopee img{
+           width: 20rem;
+              height: 10rem;
+            
+        }
+    }
+    .sale-shopee{
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto auto ;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: max-content;
+        gap:3rem;
+        background-color: antiquewhite;
+        margin-top: 1rem;
+        a{
+            padding: 1rem;
+            width: 80%;
+            text-decoration: none;
+            color: black;
+        }
+        .sale img{
+            width: 3rem;
+            height: 3rem;
+        }
+        .sale img:hover{
+            transform: scale(1.1);
+        }
+        .sale p{
+            font-size: small;
+            margin-bottom: 0;
+        }
+    }
+}
+
+

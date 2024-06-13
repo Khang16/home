@@ -1,0 +1,53 @@
+@media screen and (max-width: 600px){
+    .all_products {
+        display: grid;
+        grid-template-columns: auto auto ;
+        justify-content: space-around;
+        text-align: center;
+        padding: 0 1rem ;
+    margin: 0 ;
+        gap: 1rem;
+        text-align: center;
+    
+        .product {
+            width: 11.6rem;
+            text-decoration: none;
+            color: black;
+            img {
+                height: 10rem;
+                width: auto;
+            }
+    
+            p {
+                width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                width: 90%;
+            }
+    
+            span {
+                color: red;
+              
+            }
+        }
+        .product:hover {
+            border: 0.5px solid red; /* Hiển thị viền đỏ khi hover vào */
+        }
+        .progress{
+            background-color: #FFBDA6;
+            position: relative;
+            .progress-bar{
+                background-color: #ED2216;
+            }
+            .progress-title{
+                position: absolute;
+                color: white;
+                text-align: center;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+        }
+    }
+    
+}

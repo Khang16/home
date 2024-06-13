@@ -1,0 +1,36 @@
+.danh-muc {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+
+.content_danhmuc  {
+    display: grid;
+    grid-template-columns: repeat(6, 0.5fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    img {
+        height: 10rem;
+        width: 10rem;
+    }
+   
+}
+
+
+
+
+
+.flash_sale {
+    display: flex;
+
+    align-items: center;
+    .count_down {
+        display: flex;
+        justify-content: left;
+        padding-left: 11rem;
+        gap: 2rem;
+        
+    }
+}

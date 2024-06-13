@@ -1,0 +1,152 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: Helvetica Neue, Helvetica, Arial, 文泉驛正黑, WenQuanYi Zen Hei, Hiragino Sans GB, 儷黑 Pro, LiHei Pro, Heiti TC, 微軟正黑體, Microsoft JhengHei UI, Microsoft JhengHei, sans-serif;
+
+}
+
+.container_header1 {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ee4d2d;
+
+    .header_right,
+    .header_left {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+
+            height: max-content;
+            margin: 0.5rem 0;
+            color: white;
+
+        }
+    }
+
+    .header_right {
+        a {
+            .admin {
+                display: none;
+                position: relative;
+                a{
+                    color: black;
+                }
+                padding: 0.5rem;
+                margin-top: 0.05rem;
+
+            }
+            &:hover {
+                .admin {
+                    position: absolute;
+                    top:2rem;
+                    display: block; // hoặc display: inline-block; hoặc display: inline; tùy thuộc vào kiểu hiển thị mong muốn
+                    background-color: white;
+                    border: 0.5px solid gainsboro;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+    
+
+    .header_left {
+        p {
+            border-right: 1px solid white;
+            padding: 0rem 0.5rem;
+            color: white;
+        }
+    }
+
+    svg {
+        color: white;
+
+    }
+}
+
+.container_header2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-color: #ee4d2d;
+    margin-bottom: 2rem;
+    a{
+        img{
+            height: auto;
+            width: 10rem;
+        }
+    }
+    .container_search {
+        display: flex;
+        width: max-content;
+        align-items: center;
+        height: max-content;
+        border-radius: 0.5rem;
+        background-color: white;
+
+        input {
+            width: 50rem;
+            height: 3rem;
+            margin: 0.1rem;
+            border: none;
+            position: relative;
+        }
+
+        .icon_search {
+            margin: 0.1rem;
+            background-color: red;
+            height: 2.5rem;
+            width: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                height: 1rem;
+                width: 1rem;
+
+            }
+        }
+        .displaySearch {
+            position: absolute;
+            top: 6rem;
+            
+            text-align: center;
+            width: 53%; // Chiều rộng phù hợp với input
+            background-color: #fff; // Màu nền
+            border: 1px solid #ccc; // Đường viền
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Hiệu ứng bóng đổ
+            display: none; // Mặc định ẩn
+            z-index: 1000; // Đảm bảo hiển thị trên các phần tử khác
+            a {
+                text-decoration: none;
+                padding: 0.5rem;
+                background-color: white;
+                border: 0.5px solid gainsboro;
+                color: black;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 1rem;
+            }
+        }
+    }
+
+    svg {
+        height: 4rem;
+        width: 12rem;
+        color: aliceblue;
+    }
+
+}

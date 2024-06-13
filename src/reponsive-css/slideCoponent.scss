@@ -1,0 +1,12 @@
+@media screen and (max-width: 600px){
+    .sale-shopee{
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden;
+        gap: 1rem;
+        div{
+            width: 10rem;
+        }
+    }
+}

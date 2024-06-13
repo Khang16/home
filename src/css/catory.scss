@@ -1,0 +1,33 @@
+.items_danhmuc{
+    display: grid;
+    grid-template-columns: auto auto auto auto ;
+    justify-content: space-around;
+
+    padding: 0  9rem;
+    margin: 0 auto;
+    gap: 1rem;
+    text-align: center;
+
+    
+    h5{
+        color: #ED2216;
+    }
+    .progress{
+        background-color: #FFBDA6;
+        width: 80%;
+        margin: 0 auto;
+        .progress-bar{
+            position: relative;
+            background-color: #ED2216;
+        }
+        .progress-title{
+       
+           
+            position: absolute;
+            color: white;
+            padding: 0 2.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    }
+}

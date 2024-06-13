@@ -1,0 +1,35 @@
+.fixSizeProduct{
+    display: flex;
+    justify-content: center;
+}
+.productID{
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    .Infor_Prodduct{
+        p{
+            font-weight: 900;
+        }
+    }
+    h3{
+        color: #EE4D2D;
+    }
+    h4{
+        text-align: left;
+    }
+    button{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #FFEEE8;
+        padding: 1rem;
+        color: #EE4D2D;
+        gap: 0.5rem;
+        border-color:#ee4d2d ;
+    }
+} 
+h4{
+        text-align: center;
+    }

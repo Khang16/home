@@ -1,0 +1,26 @@
+.cart{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    p{
+        font-weight: 500;
+    }
+    button{
+        background-color: #ED2216;
+        color: white;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+    }
+    button:hover{
+        background-color: #FFBDA6;
+        transition: 0.5s;
+    }
+}
+.TotalPrice{
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #ED2216;
+}
