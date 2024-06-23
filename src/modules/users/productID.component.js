@@ -41,7 +41,7 @@ function ProductIDComponent() {
     };
 
     const handleClickReload = () => {
-        window.location.reload({ ProductComponent });
+        window.scrollTo(0, 0)
     }
 
     useEffect(() => {
