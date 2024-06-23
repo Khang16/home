@@ -6,6 +6,7 @@ import { RiAdminLine } from "react-icons/ri";
 import { useEffect, useState } from "react";
 import { BsCart3 } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
 export function HeaderComponent() {
 
     const [title, setTitle] = useState('');
@@ -89,9 +90,9 @@ export function HeaderComponent() {
             </div>
 
             <div className="container_header2">
-                <a href="http://localhost:3000/home/slide">
-                    <img src="https://freelogopng.com/images/all_img/1656181621shopee-logo-white.png"></img>
-                </a>
+                <Link to="/home/slide">
+                    <img src="https://freelogopng.com/images/all_img/1656181621shopee-logo-white.png" alt="Shopee Logo" />
+                </Link>
                 <div className="container_search">
                     <input value={title} placeholder="TÌm kiếm " onChange={handleChangeTitle}></input><br />
                     <div className="displaySearch">
@@ -105,7 +106,7 @@ export function HeaderComponent() {
                 </div>
                 <div className="iconCart" onClick={handleAddCart}>
                     <BsCart3 />
-                 
+
                 </div>
             </div>
         </div>
