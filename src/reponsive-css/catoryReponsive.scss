@@ -1,0 +1,56 @@
+@media screen and (max-width: 600px){
+    .items_danhmuc{
+        display: flex;
+        flex-direction: column;
+        flex-flow: row wrap;
+        justify-content: center;
+        width: calc(100% - 0.5rem);
+        // width: calc(100% - 1rem); /* Hiển thị các hàng sản phẩm trên 1 dòng */ 1 cách tự động
+        flex-wrap: wrap;
+    
+        align-items: center;
+        text-align: center;
+        padding: 0 auto;
+        margin: 0 auto;
+        gap: 1rem;
+        text-align: center;
+        img{
+            height: 11rem;
+            width: 11rem;
+        }
+        h3{
+            //hiển thị chữ trên 1 dòng
+            
+         
+            width: 95%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: medium;
+                    
+        }
+        
+        h5{
+            color: #ED2216;
+        }
+        .progress{
+            background-color: #FFBDA6;
+            position: relative;
+            text-align: center;
+            width: 15rem;
+            margin: 0 auto;
+            .progress-bar{
+                background-color: #ED2216;
+            }
+            .progress-title{
+                
+                text-align: right;
+                position: absolute;
+                color: white;
+                padding: 0 3.5rem;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

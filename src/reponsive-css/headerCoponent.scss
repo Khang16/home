@@ -35,13 +35,17 @@
 
             }
         }
-
+        .header_left{
+            display: none;
+        }
         .header_right {
+            display: flex;
+                justify-content: space-around;
+                align-items: center;
             a {
-                display: none;
-
+                
                 .admin {
-                    display: none;
+                   
                     position: relative;
 
                     a {

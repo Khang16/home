@@ -67,10 +67,10 @@ export function HeaderComponent() {
                         <IoIosNotificationsOutline></IoIosNotificationsOutline>
                         Thông báo
                     </a>
-                    <a href="#">
+                    {/* <a href="#">
                         <FaQuestion></FaQuestion>
                         Hỗ trợ
-                    </a>
+                    </a> */}
                     <a href="#">
                         <GrLanguage></GrLanguage>
                         Tiếng việt

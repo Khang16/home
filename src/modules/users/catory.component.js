@@ -23,15 +23,17 @@ export function CategoryComponent() {
 
     return (
         <>
+            <h3>Chi tiết sản phẩm: {categoryName}</h3><br></br>
             <div className="items_danhmuc">
+
                 {products.map((product) => (
                     <div key={product.id} onClick={() => handleProductClick(product.id)}>
-                       <img src={product.thumbnail}></img>
+                        <img src={product.thumbnail}></img>
                         <h3>{product.title} </h3>
                         <h5>{product.price}$</h5>
                         <div className="progress" role="progressbar" aria-label="Basic example" aria-valuenow={25} aria-valuemin={0} aria-valuemax={100}>
                             <div className="progress-bar" style={{ width: product.stock }}>
-                                
+
                             </div>
                             <p className="progress-title">Đang bán chạy</p>
                         </div>

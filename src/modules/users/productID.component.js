@@ -57,6 +57,7 @@ function ProductIDComponent() {
     return (
         <>
             <div className="fixSizeProduct">
+                
                 <div className="productID">
                     <img src={product.thumbnail} alt={product.title} />
                     <div className="Infor_Product">
