@@ -51,7 +51,25 @@ export function Slide() {
                     </a>
                     <a href="#">
                         <div className="sale">
-                            <img src="https://cf.shopee.vn/file/a8d76bca057ba0b117dcf8e1ef068d16_xhdpi"></img>
+                            <img src="https://cf.shopee.vn/file/vn-50009109-f6c34d719c3e4d33857371458e7a7059_xhdpi"></img>
+                            <p>Khung giờ Săn Sale</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div className="sale">
+                            <img src="	https://cf.shopee.vn/file/e4a404283b3824c211c1549aedd28d5f_xhdpi"></img>
+                            <p>Khung giờ Săn Sale</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div className="sale">
+                            <img src="https://cf.shopee.vn/file/vn-50009109-c02353c969d19918c53deaa4ea15bdbe_xhdpi"></img>
+                            <p>Khung giờ Săn Sale</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div className="sale">
+                            <img src="https://cf.shopee.vn/file/vn-50009109-91399a1d3ed283d272b069fac5ca989c_xhdpi"></img>
                             <p>Khung giờ Săn Sale</p>
                         </div>
                     </a>
@@ -85,6 +103,7 @@ export function Slide() {
                             <p>Khung giờ Săn Sale</p>
                         </div>
                     </a>
+                   
                 </div>
                 
             </div>

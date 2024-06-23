@@ -1,8 +1,8 @@
 {
-  "name": "shopee_home",
+  "name": "home",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://shopee-home.github.io/shopee_home",
+  "homepage": "https://home.github.io/home",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",

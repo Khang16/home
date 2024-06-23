@@ -1,12 +1,57 @@
-@media screen and (max-width: 600px){
-    .sale-shopee{
+@media screen and (max-width: 600px) {
+    .container-slide {
         display: flex;
-        flex-direction: row;
-        overflow-x: auto;
-        overflow-y: hidden;
-        gap: 1rem;
-        div{
-            width: 10rem;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+
+        .sale-shopee {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            align-items: center;
+            justify-content: left;
+            width: 100%;
+            gap: 2rem;
+            text-align: center;
+        }
+
+
+
+        .body-shopee {
+            padding-top: 10px;
+            display: grid;
+            grid-template-columns: auto;
+            width: 80%;
+            height: 20%;
+            gap: 0.5rem;
+
+            .top-left-shopee {
+                padding: 0 0.5rem;
+
+                img {
+                    height: 10rem;
+                    width: auto;
+                }
+            }
+
+            .top-right-shopee {
+
+                display: flex;
+                flex-direction: column;
+                height: max-content;
+                gap: 0.5rem;
+                margin-left: 0.5rem;
+            }
+
+            .top-right-shopee img {
+                width: 21.5rem;
+                height: 10rem;
+
+            }
         }
     }
+
 }

@@ -3,11 +3,14 @@
     justify-content: center;
 }
 .productID{
+    
     margin-top: 0.5rem;
     display: flex;
-    justify-content: center;
+    gap: 2rem;
+    justify-content: space-between;
     align-items: center;
     width: 80%;
+   
     .Infor_Prodduct{
         p{
             font-weight: 900;
@@ -20,6 +23,7 @@
         text-align: left;
     }
     button{
+        margin-bottom: 1rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -32,4 +36,9 @@
 } 
 h4{
         text-align: center;
+    }
+    .reviews{
+        margin-top: 1rem;
+        padding: 0 10rem;
+        
     }

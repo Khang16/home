@@ -14,6 +14,8 @@ import './reponsive-css/CatorysildeReponsive.scss'
 import './reponsive-css/AllproductReponsive.scss'
 import './reponsive-css/slideCoponent.scss'
 import './reponsive-css/headerCoponent.scss'
+import './reponsive-css/productIDReponsive.scss'
+import './reponsive-css/cartReponsive.scss'
 import {RouterProvider} from 'react-router-dom'
 import router from './router/router';
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -35,7 +35,7 @@ export default function CartComponent() {
         setCart(newCart);
         localStorage.setItem('cart', JSON.stringify(newCart));
     }
-    
+
     const handleRemoveItem = (item) => {
         const newCart = cart.filter((cartItem) => cartItem.id !== item.id);
         setCart(newCart);
@@ -47,19 +47,22 @@ export default function CartComponent() {
     return (
         <h2>Giỏ hàng</h2>,
         <div>
-            
+
             {cart.map((item, index) => (
-                <div  className="cart" key={index}>
+                <div className="cart" key={index}>
                     <p>{item.name}</p>
                     <img src={item.thumbnail} alt={item.name} />
                     <p>Giá: ${item.price}</p>
                     <p>Số lượng: {item.quantity}</p>
-                    <button onClick={() => handleDecreItem(item)}>Decre</button>
-                    <button onClick={() => handleAddItem(item)}>Add</button>
-                    <button onClick={() => handleRemoveItem(item)}>Delete</button>
-                    
+                    <div>
+                        <button onClick={() => handleDecreItem(item)}>Decre</button>
+                        <button onClick={() => handleAddItem(item)}>Add</button>
+                        <button onClick={() => handleRemoveItem(item)}>Delete</button>
+                    </div>
+
+
                 </div>
-                
+
             ))}
             <p className="TotalPrice">Tổng giá tiền: {totalPrice.toFixed(2)}$</p>
         </div>

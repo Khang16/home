@@ -3,12 +3,21 @@ import { useParams } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
 import { ProductComponent } from "./product.component";
 import { CiShoppingCart } from "react-icons/ci";
+
 function ProductIDComponent() {
     const { productId } = useParams();
     const [product, setProduct] = useState(null);
 
     const calculateStarColor = (index) => {
         if (index < Math.round(product?.rating)) {
+            return "red";
+        } else {
+            return "gray";
+        }
+    };
+
+    const calculateStarColor1 = (index, rating) => {
+        if (index < Math.round(rating)) {
             return "red";
         } else {
             return "gray";
@@ -32,9 +41,9 @@ function ProductIDComponent() {
     };
 
     const handleClickReload = () => {
-        window.location.reload({ProductComponent});
-    
+        window.location.reload({ ProductComponent });
     }
+
     useEffect(() => {
         fetch(`https://dummyjson.com/products/${productId}`)
             .then(res => res.json())
@@ -59,7 +68,6 @@ function ProductIDComponent() {
                                 key={index}
                                 size={24}
                                 color={calculateStarColor(index)}
-
                             />
                         ))}
                         <br></br>
@@ -72,14 +80,38 @@ function ProductIDComponent() {
                 </div>
             </div>
 
+            
+            <div className="reviews">
+            <h5>Đánh giá sản phẩm</h5>
+                {product.reviews && product.reviews.length > 0 ? (
+                    product.reviews.map((review, index) => (
+                        <div key={index} className="review">
+                            <p>
+                                {review.reviewerName}<br />
+                                {review.comment}<br />
+                                
+                                {[...Array(5)].map((_, i) => (
+                                    <FaStar
+                                        key={i}
+                                        size={24}
+                                        color={calculateStarColor1(i, review.rating)}
+                                    />
+                                ))},<br></br>
+                                <span>{review.date}</span>
+                            </p>
+                        </div>
+                    ))
+                ) : (
+                    <p>Không có đánh giá nào</p>
+                )}
+            </div>
+
             <h4>CÓ THỂ BẠN CŨNG THÍCH</h4>
             <div onClick={handleClickReload}>
                 <ProductComponent />
             </div>
         </>
-
     );
-
 }
 
 export default ProductIDComponent;

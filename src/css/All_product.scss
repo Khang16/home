@@ -1,9 +1,16 @@
 .all_products {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto;
+    display: flex;
+    flex-direction: column;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: calc(100% - 1rem);
+    // width: calc(100% - 1rem); /* Hiển thị các hàng sản phẩm trên 1 dòng */ 1 cách tự động
+    flex-wrap: wrap;
+
+    align-items: center;
     justify-content: space-around;
     text-align: center;
-    padding: 0  9rem;
+    padding: 0 9rem;
     margin: 0 auto;
     gap: 1rem;
     text-align: center;
@@ -12,6 +19,9 @@
         width: 11.6rem;
         text-decoration: none;
         color: black;
+        border: 0.5px solid #ccc;
+        border-radius: 2rem;
+        padding: 1rem;
         img {
             height: 10rem;
             width: auto;

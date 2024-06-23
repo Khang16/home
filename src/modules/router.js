@@ -5,7 +5,7 @@ import ProductIDComponent  from "./users/productID.component";
 import { CategoryComponent } from "./users/catory.component";
 import CartComponent from "./users/cart.component";
 export const contentRouter={
-    path: '/home',
+    path: 'home',
     children:[
         
         {

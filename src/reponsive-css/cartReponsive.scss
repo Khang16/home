@@ -1,0 +1,10 @@
+@media screen and (max-width: 600px){
+    .cart{
+        display: grid;
+        grid-template-columns: auto;
+        padding-left: 2rem;
+        div{
+            padding: 0.5rem 0;
+        }
+    }
+}

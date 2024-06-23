@@ -1,13 +1,40 @@
 @media only screen and (max-width: 600px){
-    .content_danhmuc{
+    .content_danhmuc  {
         display: flex;
         flex-direction: row;
-        overflow-x: auto;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
         overflow-y: hidden;
-        gap: 1rem;
-        div{
-            width: 10rem;
+        align-items: center;
+        justify-content: left;
+        width: 100%;
+        gap: 0.5rem;
+        text-align: center;
+        img {
+            height: 9rem;
+            width: 9rem;
+        }
+       padding-left: 0.5rem;
+    }
+    // .content_danhmuc{
+    //     display: flex;
+    //     flex-direction: row;
+    //     overflow-x: scroll;
+    //     overflow-y: hidden;
+    //     gap: 1rem;
+    //     div{
+    //         width: 10rem;
+    //     }
+    // }
+    .flash_sale {
+       
+        .count_down {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 8%;
+            
+            
         }
     }
-    
 }
