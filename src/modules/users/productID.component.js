@@ -106,7 +106,7 @@ function ProductIDComponent() {
                     <p>Không có đánh giá nào</p>
                 )}
             </div>
-
+            <hr></hr>
             <h4>CÓ THỂ BẠN CŨNG THÍCH</h4>
             <div onClick={handleClickReload}>
                 <ProductComponent />

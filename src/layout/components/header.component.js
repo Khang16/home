@@ -14,7 +14,7 @@ export function HeaderComponent() {
     const [nameLogin, setNameLogin] = useState("")
     const navigate = useNavigate();
     useEffect(() => {
-        fetch('https://dummyjson.com/users/1')
+        fetch('https://dummyjson.com/users/10')
             .then(res => res.json())
             .then(json => {
                 setNameLogin(json);
@@ -97,7 +97,7 @@ export function HeaderComponent() {
                     <input value={title} placeholder="TÌm kiếm " onChange={handleChangeTitle}></input><br />
                     <div className="displaySearch">
                         {filteredProducts.map(product => (
-                            <a href={"http://localhost:3000/home/product/" + product.id} key={product.id}>{product.title}</a>
+                            <Link to={"/home/product/" + product.id} key={product.id}>{product.title}</Link>
                         ))}
                     </div>
                     <div className="icon_search">

@@ -21,7 +21,7 @@ function Content() {
             .catch(error => {
                 console.error('Error fetching categories:', error);
             });
-    }, []);
+    }, [],);
 
     const CountdownTimer = () => {
         const [timeLeft, setTimeLeft] = useState("");
