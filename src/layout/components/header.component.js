@@ -40,6 +40,11 @@ export function HeaderComponent() {
         } else {
             document.querySelector(".displaySearch").style.display = "none";
         }
+        
+    }
+    const clearSearchInput = () => {
+        setTitle('');
+        document.querySelector(".displaySearch").style.display = "none";
     }
     const handleAddCart = () => {
         navigate("/home/cart")
@@ -97,7 +102,7 @@ export function HeaderComponent() {
                     <input value={title} placeholder="TÌm kiếm " onChange={handleChangeTitle}></input><br />
                     <div className="displaySearch">
                         {filteredProducts.map(product => (
-                            <Link to={"/home/product/" + product.id} key={product.id}>{product.title}</Link>
+                            <Link to={"/home/product/" + product.id} key={product.id} onClick={clearSearchInput}>{product.title}</Link>
                         ))}
                     </div>
                     <div className="icon_search">
