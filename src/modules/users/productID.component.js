@@ -3,7 +3,8 @@ import { useParams } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
 import { ProductComponent } from "./product.component";
 import { CiShoppingCart } from "react-icons/ci";
-
+import { useLottie } from "lottie-react";
+import groovyWalkAnimation from "./Loading.json";
 function ProductIDComponent() {
     const { productId } = useParams();
     const [product, setProduct] = useState(null);
@@ -51,13 +52,32 @@ function ProductIDComponent() {
                 setProduct(json);
             });
     }, [productId]);
+    const style = {
+        height: 300,
+    };
 
-    if (!product) return <p>Loading...</p>;
+    const App = () => {
+        const options = {
+            animationData: groovyWalkAnimation,
+            loop: true,
+            autoplay: true,
+        };
+
+        const { View } = useLottie(options, style);
+
+        return View;
+    };
+    if (!product) return (
+        <div>
+            <p>Đang tải dữ liệu</p>
+            <App></App>
+        </div>
+    );
 
     return (
         <>
             <div className="fixSizeProduct">
-                
+
                 <div className="productID">
                     <img src={product.thumbnail} alt={product.title} />
                     <div className="Infor_Product">
@@ -81,16 +101,16 @@ function ProductIDComponent() {
                 </div>
             </div>
 
-            
+
             <div className="reviews">
-            <h5>Đánh giá sản phẩm</h5>
+                <h5>Đánh giá sản phẩm</h5>
                 {product.reviews && product.reviews.length > 0 ? (
                     product.reviews.map((review, index) => (
                         <div key={index} className="review">
                             <p>
                                 {review.reviewerName}<br />
                                 {review.comment}<br />
-                                
+
                                 {[...Array(5)].map((_, i) => (
                                     <FaStar
                                         key={i}

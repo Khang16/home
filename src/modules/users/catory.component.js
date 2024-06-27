@@ -1,25 +1,55 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { CategoryItem } from "./CategoryItem.component";
-
+import { useLottie } from "lottie-react";
+import groovyWalkAnimation from "./Loading.json";
 export function CategoryComponent() {
     const [products, setProducts] = useState([]);
-    const { categoryName } = useParams(); // Use useParams to get the category name from the URL
+    const [isLoading, setIsLoading] = useState(false); // Add isLoading state
+    const { categoryName } = useParams();
     const navigate = useNavigate();
 
     useEffect(() => {
+        setIsLoading(true); // Start loading
         fetch(`https://dummyjson.com/products/category/${categoryName}`)
             .then(response => response.json())
             .then(data => {
-                console.log('Fetched category:', data);  // Debug log
-                setProducts(data.products); // Assume the API returns an object with a 'products' array
+                setProducts(data.products);
+                setIsLoading(false); // Stop loading after data is fetched
             })
-            .catch(error => console.error('Error fetching category:', error));
+            .catch(error => {
+                console.error('Error fetching category:', error);
+                setIsLoading(false); // Stop loading on error
+            });
     }, [categoryName]);
 
     const handleProductClick = (productId) => {
         navigate(`/home/product/${productId}`);
     };
+    const style = {
+        height: 300,
+    };
+
+    const App = () => {
+        const options = {
+            animationData: groovyWalkAnimation,
+            loop: true,
+            autoplay: true,
+        };
+
+        const { View } = useLottie(options, style);
+
+        return View;
+    };
+
+    if (isLoading) { // Use isLoading to check if it's loading
+        return (
+            <div>
+                <p>Loading ...</p>
+                <App></App>
+            </div>
+        );
+    }
 
     return (
         <>

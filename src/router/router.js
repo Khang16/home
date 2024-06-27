@@ -6,6 +6,7 @@ export default createBrowserRouter([
     {
         path:'/',
         element: <MainLayOut></MainLayOut>,
+        
         children:[
             contentRouter
         ]

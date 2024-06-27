@@ -14,7 +14,7 @@ export function HeaderComponent() {
     const [nameLogin, setNameLogin] = useState("")
     const navigate = useNavigate();
     useEffect(() => {
-        fetch('https://dummyjson.com/users/10')
+        fetch('https://dummyjson.com/users/1')
             .then(res => res.json())
             .then(json => {
                 setNameLogin(json);
